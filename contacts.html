@@ -343,6 +343,47 @@
 	<!-- scripts -->
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
+	<!-- map -->
+	<script src="https://api-maps.yandex.ru/v3/?apikey=272daf47-8e86-4f2b-8795-f9014a7090ad&lang=ru_RU" type="text/javascript"></script>
+	<script>
+		initMap();
+
+		async function initMap() {
+			await ymaps3.ready;
+
+			const {
+				YMap,
+				YMapDefaultSchemeLayer,
+				YMapDefaultFeaturesLayer,
+				YMapMarker
+			} = ymaps3;
+
+			const map = new YMap(
+				document.getElementById('contacts-map'),
+
+				{
+					location: {
+						center: [37.588144, 55.733842],
+						zoom: 10
+					}
+				}
+			);
+
+			map.addChild(new YMapDefaultSchemeLayer());
+			map.addChild(new YMapDefaultFeaturesLayer());
+
+
+			const markerElement = document.createElement('img');
+			markerElement.className = 'icon-marker';
+			markerElement.src = 'img/icon-map-pin.svg';
+
+			let newMarker = new YMapMarker({
+				coordinates: [37.64, 55.76]
+			}, markerElement);
+			map.addChild(newMarker);
+		}
+	</script>
+	<!-- end of map -->
 </body>
 
 </html>

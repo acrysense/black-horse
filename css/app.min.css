@@ -4081,10 +4081,6 @@ svg {
 }
 .contacts__map {
   display: block;
-  background-image: url(../img/map-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 @media screen and (min-width: 1024px) {
   .contacts__map {
@@ -4508,10 +4504,6 @@ svg {
   overflow: hidden;
   margin-top: 46px;
   height: 480px;
-  background-image: url(../img/map-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
   border-radius: 10px;
 }
 @media screen and (max-width: 767px) {
@@ -5758,4 +5750,18 @@ svg {
     width: 591px;
     height: 325px;
   }
+}
+
+.icon-marker {
+  position: relative;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  min-width: 57px;
+  width: 57px;
+  height: 57px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
 }
