@@ -903,7 +903,7 @@ svg {
   min-width: 42px;
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
 }
 @media screen and (hover: hover) {
